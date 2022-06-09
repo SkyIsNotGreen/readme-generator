@@ -19,52 +19,57 @@ const licenseBadge = (license) => {
 // generate markdown for README.md
 const generateMarkdown = (data) => {
 
-    return ` # ${data.title}
-    ${licenseBadge(data.license)}
+return `# ${data.title} ${licenseBadge(data.license)}
 
-    ## Table of Contents
-    - [Description](#description)
-    - [Installation](#installation)
-    - [Getting Started](#getting-started)
-    - [License](#license)
-    - [Contributing](#contributing)
-    - [Tests](#tests)
-    - [Credits](#credits)
+## Table of Contents
+* [Description](#description)
+* [Installation](#installation)
+* [Getting Started](#getting-started)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Credits](#credits)
 
-    ## Description
-    ${data.description}
+    
+## Description
 
-    ## Installation
+${data.description}
 
-    Please follow the instructions below:
-    \`\`\`
-    ${data.installInstructions}
-    \`\`\`
+## Installation
 
-    ## Getting Started
+Please follow the instructions below:
+\`\`\`   
+${data.installInstructions}
+\`\`\`
 
-    Please follow the instructions below:
-    \`\`\`
-    ${data.gettingStarted}
-    \`\`\`
+## Getting Started
 
-    ## License
-    ${data.license}
+Please follow the instructions below:
+\`\`\` 
+${data.gettingStarted}
+\`\`\`
 
-    ## Contributing
-    ${data.guidelines}
+## License
+${data.license}
 
-    ## Tests
+## Contributing
+How to contribute to this project:
+${data.guidelines}
 
-    Please follow the instructions below:
-    \`\`\`
-    ${data.testInstructions}
-    \`\`\`
+## Tests
 
-    ## Credits
-  https://github.com/${data.username}
-  Reach me at: ${data.email}
-    `;
+Please follow the instructions below:
+\`\`\` 
+${data.testInstructions}
+\`\`\`
+    
+
+## Credits
+
+https://github.com/${data.username}
+  
+Reach me at: ${data.email}
+`;
 }
 
-export default generateMarkdown;
+export default generateMarkdown
