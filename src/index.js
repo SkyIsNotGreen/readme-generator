@@ -1,8 +1,7 @@
-// required packages to make the app work 
-const inquirer = require("inquirer");
-const fs = require("fs");
-const generateMarkdown = require("./markdown");
-
+// required packages to make the app work and to generate the README.md file
+import inquirer from "inquirer";
+import { writeFile } from "fs";
+import generateMarkdown from "./markdown.js";
 
 // array of questions for user
 const questions = [
@@ -63,3 +62,27 @@ const questions = [
     },
 ];
 
+// function to write README file
+const writeToFile = (fileName, data) => {
+    writeFile(fileName, data, (err) => {
+        if (err) {
+            throw err;
+        }
+        console.log("Successfully wrote to README.md");
+    }
+    );
+}
+
+// function to initialize program
+const init = () => {
+    inquirer
+        .prompt(questions)
+        .then((response) => {
+            const readme = generateMarkdown(response);
+            writeToFile("GENERATED_README.md", readme);
+        }
+        );
+}
+
+
+init();
