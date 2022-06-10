@@ -64,10 +64,13 @@ const questions = [
 
 // function to write README file
 const writeToFile = (fileName, data) => {
+
     writeFile(fileName, data, (err) => {
+
         if (err) {
             throw err;
         }
+
         console.log("Successfully wrote to README.md");
     }
     );
@@ -77,12 +80,12 @@ const writeToFile = (fileName, data) => {
 const init = () => {
     inquirer
         .prompt(questions)
+
         .then((response) => {
             const readme = generateMarkdown(response);
             writeToFile("GENERATED_README.md", readme);
         }
         );
 }
-
 
 init();
