@@ -16,7 +16,9 @@ npm install
 npm run start
 ```
 
-## Screenshots
+## Video & Screenshots
+
+Video showing usage: https://drive.google.com/file/d/1-OITiSA9_MT1HanKYMuEIwNZ1BJb_7DQ/view?usp=sharing 
 
 Prompt order:
 ![sdfgdf](https://user-images.githubusercontent.com/60657981/173157700-f163e045-55b6-4a2f-b35d-0289330612ce.PNG)
